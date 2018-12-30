@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47D655B7-EE21-4E1F-B489-ECB2004BEC0C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sistema_Control_de_Almacen</RootNamespace>
+    <AssemblyName>Sistema Control de Almacen</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\..\Desktop\UiDesignDemo\UiDesignDemo\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\Desktop\Copia\Sistema Ferretero\bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formularios\Inicio_Session.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Inicio_Session.Designer.cs">
+      <DependentUpon>Inicio_Session.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mensaje.Designer.cs">
+      <DependentUpon>Mensaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Acerca\Informacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Acerca\Informacion.Designer.cs">
+      <DependentUpon>Informacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Acerca\Seleccion\Acerda_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Acerca\Seleccion\Acerda_de.Designer.cs">
+      <DependentUpon>Acerda_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Acerca\Seleccion\Sugerencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Acerca\Seleccion\Sugerencias.Designer.cs">
+      <DependentUpon>Sugerencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Administrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Administrar.Designer.cs">
+      <DependentUpon>Administrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\CEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\CEntradas.Designer.cs">
+      <DependentUpon>CEntradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\CSalidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\CSalidas.Designer.cs">
+      <DependentUpon>CSalidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Formularios\Cuentas\Cuentas_Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Formularios\Cuentas\Cuentas_Nuevo.Designer.cs">
+      <DependentUpon>Cuentas_Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Formularios\Cuentas\Cuenta_Editar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Formularios\Cuentas\Cuenta_Editar.Designer.cs">
+      <DependentUpon>Cuenta_Editar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Formularios\Inventario\Inventario_Editar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Formularios\Inventario\Inventario_Editar.Designer.cs">
+      <DependentUpon>Inventario_Editar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Formularios\Inventario\Inventario_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Formularios\Inventario\Inventario_Eliminar.Designer.cs">
+      <DependentUpon>Inventario_Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Formularios\Inventario\Inventario_Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Formularios\Inventario\Inventario_Nuevo.Designer.cs">
+      <DependentUpon>Inventario_Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Seleccion_Administrar\Cuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Seleccion_Administrar\Cuentas.Designer.cs">
+      <DependentUpon>Cuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Seleccion_Administrar\Entradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Seleccion_Administrar\Entradas.Designer.cs">
+      <DependentUpon>Entradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Seleccion_Administrar\Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Seleccion_Administrar\Inventario.Designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Materiales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Materiales.Designer.cs">
+      <DependentUpon>Materiales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Panel\Seleccion_Administrar\Salidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Panel\Seleccion_Administrar\Salidas.Designer.cs">
+      <DependentUpon>Salidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Inicio_Session.resx">
+      <DependentUpon>Inicio_Session.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mensaje.resx">
+      <DependentUpon>Mensaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Acerca\Informacion.resx">
+      <DependentUpon>Informacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Acerca\Seleccion\Acerda_de.resx">
+      <DependentUpon>Acerda_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Acerca\Seleccion\Sugerencias.resx">
+      <DependentUpon>Sugerencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Administrar.resx">
+      <DependentUpon>Administrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\CEntradas.resx">
+      <DependentUpon>CEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\CSalidas.resx">
+      <DependentUpon>CSalidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Formularios\Cuentas\Cuentas_Nuevo.resx">
+      <DependentUpon>Cuentas_Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Formularios\Cuentas\Cuenta_Editar.resx">
+      <DependentUpon>Cuenta_Editar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Formularios\Inventario\Inventario_Editar.resx">
+      <DependentUpon>Inventario_Editar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Formularios\Inventario\Inventario_Eliminar.resx">
+      <DependentUpon>Inventario_Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Formularios\Inventario\Inventario_Nuevo.resx">
+      <DependentUpon>Inventario_Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Seleccion_Administrar\Cuentas.resx">
+      <DependentUpon>Cuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Seleccion_Administrar\Entradas.resx">
+      <DependentUpon>Entradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Seleccion_Administrar\Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Seleccion_Administrar\Salidas.resx">
+      <DependentUpon>Salidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Panel\Materiales.resx">
+      <DependentUpon>Materiales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame_close.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame_close_hover.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame_close_pressed.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame_maximize.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame_maximize_hover.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame_maximize_pressed.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame_minimize.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame_minimize_hover.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame_minimize_pressed.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userlog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glissade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackaero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aero1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\darkgloss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default_user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_t_iconlib_d01_b1_xl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_t_iconlib_f01_b2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_t_iconlib_f01_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preference_checkbox_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preference_checkbox_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WI-FI_1_OFF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WI-FI_1_ON .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_t_iconlib_g14_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_t_iconlib_g14_p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo_roll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_public_docinfo_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upd_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_norm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_roll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_norm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_norm_rj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upd_norm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upd_roll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gantanhao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_t_iconlib_j03_b1_xl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bitesoft.System.ET\Bitesoft.System.ET.csproj">
+      <Project>{8be733d2-d68a-4989-a723-2570ce19d649}</Project>
+      <Name>Bitesoft.System.ET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bitesoft.System.LG\Bitesoft.System.LG.csproj">
+      <Project>{5900fd44-73e3-43a1-af60-8e2ef8f7e377}</Project>
+      <Name>Bitesoft.System.LG</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
